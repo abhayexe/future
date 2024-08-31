@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+main{
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.card{
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(255, 255, 255, 0.306);
+    /* box-shadow: -10px -10px 15px 1px rgba(255, 255, 255, 0.527), 10px 10px 15px 1px rgba(0, 0, 0, 0.148), 3px 3px 2px 1px rgb(0, 0, 0), -3px -3px 2px 1px rgb(251, 251, 251); */
+    min-height: 700px;
+    width: 1200px;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+.card video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content {
+    position: relative;
+    /* max-width: 500px; */
+    top: 250px;
+    /* left: 200px; */
+    z-index: 3;
+    padding: 20px;
+    /* color: #82dcff56; */
+    display: flex;
+    /* align-items:; */
+    justify-content:space-around;
+    font-size: 20px;
+    /* background-color: aliceblue; */
+}
+.card-content h1 {
+    color: rgba(244, 246, 247, 0.76);
+    /* filter: contrast(30px); */
+    font-family: 'Anton', Courier, monospace;
+    /* filter: invert(1); */
+    font-size: 80px;
+    font-weight: 100;
+    transform: translateZ(20px);
+    transition: 0.3s;
+    /* animation: colorChange 2s linear infinite; */
+    /* text-shadow: 2px 0 #00000068, -2px 0 #020000, 0 2px #000000, 0 -2px #000000,
+              inset 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000; */
+}
+/* .card-content h1:nth-child(1){
+    animation: colorChange -1s linear infinite;
+
+}
+@keyframes colorChange {
+    0% {
+        color: rgba(174, 245, 252, 0.406);
+    }
+    25% {
+        color: rgb(0, 213, 255);
+    }
+    
+} */
+.card-content h1:hover{
+    color: rgb(0, 213, 255);
+    filter: drop-shadow(0 0 0.75rem rgba(132, 207, 253, 0.432));
+}
+
+.dia{
+    font-size: 140px;
+    color: rgba(174, 245, 252, 0.406);
+    margin-top: -19px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+.dia:hover{
+    color: #001078;
+}
+.card-content1{
+    position: relative;
+    top: 250px;
+    z-index: 3;
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+    font-size: 20px;
+}
+.card-content1 p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 10px;
+
+}
+
+
+button {
+    /* margin-left: -300px;
+    margin-top: -10px; */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  
+  #btn:hover,
+  :focus {
+    color: #ffffff;
+    background: rgb(0, 213, 255);
+    border: 1px solid rgb(0, 213, 255);
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px rgb(0, 213, 255), 0 0 20px rgb(0, 213, 255), 0 0 50px #008cff,
+      0 0 100px rgb(0, 213, 255);
+  }
+  
+
+.rotating-gradient {
+    display: flex;
+    --angle: 0deg;
+    min-height: 700px;
+    width: 1200px;
+    border-radius: 30px;
+    
+}
+.rotating-gradient::before{
+    filter: blur(30px);
+    opacity: 0.8;
+}
+.rotating-gradient::after,
+.rotating-gradient::before {
+    animation: 3s spin linear infinite;
+}
+.rotating-gradient::after, .rotating-gradient::before{
+    content: '';
+    position: absolute;
+    min-height: 710px;
+    width: 1200px;
+    z-index: 0;
+    border-radius: 30px;
+    background-image: conic-gradient(from var(--angle), #000000, #001078, rgb(2, 167, 250), black, black, #05164c, rgb(11, 0, 163), rgb(0, 183, 255), black, #000000,#000000,#000000);
+    /* box-shadow: inset -4px 22px 6px -22px rgb(251, 251, 251), 0px 60px 41px 10px rgba(8, 8, 9, 0.539); */
+    transition: 1s;
+    display: flex;
+}
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
